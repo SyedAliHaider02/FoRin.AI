@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Document</title>
+
+    <style>
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .btn {
+            align-self: center;
+        }
+
+        body{ background-image: url('https://img.freepik.com/free-vector/gradient-connection-background_23-2150516350.jpg?w=996&t=st=1718620114~exp=1718620714~hmac=0bf2d9f328d3ed077399afae16241d44467f199adc9bf7a0ed2af68ef545d706');
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+
+        }
+        .navbar-brand {
+            color: rgb(255, 255, 255);
+            font-size: 30px; /* Increased font size */
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.3); /* Black background with 80% opacity */
+            padding: 10px;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" >
+        <a class="navbar-brand" style="color: rgb(255, 255, 255);" href="/">ForIn.AI</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color: rgb(255, 255, 255);">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: rgb(255, 255, 255);" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contact
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="https://www.kaggle.com/syedali110">Kaggle</a>
+                        <a class="dropdown-item" href="https://www.linkedin.com/in/syed-ali-haider-93b91a230/">Linkdn</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://github.com/SyedAliHaider02">Github</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQXF5A4ulENU26w-_HgnevxMSRkcW44aGTbg&s" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Text Summarizer</h5>
+                        <p class="card-text">Text Summarizer streamlines the process of extracting critical points from large volumes of content, empowering you to make informed decisions and gain deeper understanding with ease.</p>
+                        <a href="/ts" class="btn btn-primary">Try Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeYK-iZCrn2FoEXwDCix5Z-5gT2uuOBU70nQ&s" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">AI Text Detector</h5>
+                        <p class="card-text">AI Text Forecaster offers a seamless and intuitive user experience, making it an invaluable tool for researchers and AI enthusiasts seeking to verify the authenticity of textual data.</p>
+                        <a href="/ai" class="btn btn-primary">Try Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                    <img class="card-img-top" src="https://hashstudioz.com/blog/wp-content/uploads/2023/09/ezgif.com-gif-maker-2.webp" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Cohere ChatBot</h5>
+                        <p class="card-text">Cohere Chatbot - your intelligent assistant designed to enhance user engagement. Powered by advanced AI technology, this chatbot offers seamless, real-time communication.</p>
+                        <a href="/cb" class="btn btn-primary">Try Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                    <img class="card-img-top" src="https://i.insider.com/6247782ae22adb0018d1b640?width=700" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Youtube Sentiment Analysis</h5>
+                        <p class="card-text">An app that uses YouTube v3 API to extract comments from URL and after preprocessing the comments the model is ready to predict.</p>
+                        <a href="/yt" class="btn btn-primary">Try Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card border-primary mb-3" style="max-width: 18rem;">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_IejigFHmdeiybQCJDuJ4iDrvfIhExdrJJg&s" alt="Card image cap">
+                    <div class="card-body" >
+                        <h5 class="card-title">Topic Modeller</h5>
+                        <p class="card-text"> Discover the hidden themes in your text data with the Topic Insight Tool. This tool helps you analyze and understand large collections of documents by identifying key topics and trends.</p>
+                        <a href="/tp" class="btn btn-primary">Try Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+   
+</body>
+</html>

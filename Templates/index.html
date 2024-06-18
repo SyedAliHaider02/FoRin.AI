@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+    </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForIn.AI</title>
+    <style>.tiny5-regular {
+        font-family: "Tiny5", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    } 
+    
+    body {
+        background-color: #222;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1057%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(34%2c 34%2c 34%2c 1)'%3e%3c/rect%3e%3cpath d='M1021 214L699 -108' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M1092 318L1372 598' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M96 58L-63 -101' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M70 142L-328 -256' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M59 408L460 809' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1112 285L743 -84' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M685 362L1024 701' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M351 392L640 681' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M406 74L16 -316' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M1311 255L1562 506' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M754 325L578 149' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M791 506L408 123' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M745 161L378 -206' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1240 517L835 112' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M819 367L1015 563' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1288 280L1430 422' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M450 121L76 -253' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M989 257L655 -77' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M1289 377L893 -19' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M494 472L913 891' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M485 406L289 210' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1031 43L1341 353' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M723 190L368 -165' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M581 554L407 380' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M1282 385L1675 778' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M805 153L1151 499' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1191 134L1346 289' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M611 74L802 265' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1323 180L1106 -37' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M903 496L667 260' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M287 199L668 580' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M761 105L575 -81' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M805 451L480 126' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M1007 134L790 -83' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M558 251L138 -169' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M92 532L-308 132' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M290 443L118 271' stroke-width='6' stroke='url(%26quot%3b%23SvgjsLinearGradient1059%26quot%3b)' stroke-linecap='round' class='TopLeft'%3e%3c/path%3e%3cpath d='M1059 356L1350 647' stroke-width='10' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3cpath d='M703 145L1062 504' stroke-width='8' stroke='url(%26quot%3b%23SvgjsLinearGradient1058%26quot%3b)' stroke-linecap='round' class='BottomRight'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1057'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='0%25' x2='100%25' y2='100%25' id='SvgjsLinearGradient1058'%3e%3cstop stop-color='rgba(0%2c 255%2c 30%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(0%2c 255%2c 30%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1059'%3e%3cstop stop-color='rgba(0%2c 255%2c 30%2c 0)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(0%2c 255%2c 30%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+        background-size: cover;
+    }
+    
+    a, a:visited, a:active, a:hover {
+        text-decoration: none;
+    }
+    
+    .header {
+        font-size: 72px;
+        text-align: center;
+        color: white;
+    }
+    
+    .ai {
+        color: #00ff1e;
+        text-shadow: 0px 0px 20px #00ff1e55;
+    }
+    
+    .main {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .card-container  {
+        height: 350px;
+        width: 350px;
+        padding: 2.5px;
+        border-radius: 10000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0px 0px 20px transparent;
+        transition: all 0.25s;
+        margin: 10px 50px ;
+    }
+    
+    .card-container:hover {
+        transform: translateY(-2.5%);
+    }
+    
+    .card {
+        background-color: #35353533;
+        height: 350px;
+        width: 350px;
+        border-radius: 10000px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 5px solid #444;
+        transition: all 0.25s;
+        backdrop-filter: blur(50px);
+        box-shadow: 0px 0px 20px transparent;
+    }
+    
+    .card:hover {
+        border: 5px solid #00ff1e;
+        box-shadow: 0px 10px 20px #00ff1e55;
+    }
+    
+    .card > * {
+        margin: 15px;
+        text-align: center;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    .card-header {
+        font-size: 24px;
+        font-weight: bold;
+    }</style>
+</head>
+<body>
+
+    <h1 class="tiny5-regular header">FORIN.<span class="ai">AI</span></h1>
+
+
+    <div class="main">
+        <div class="card-container">
+            <a href="/ts">
+            <div class="card">
+                <p class="card-header">Text Summarizer</p>
+                <P class="card-description">Text Summarizer streamlines the process of extracting critical points from large volumes of content, empowering you to make informed decisions and gain deeper understanding with ease.</P>
+            </div>
+            </a>
+        </div>
+
+        <div class="card-container">
+            <a href="/ai">
+            <div class="card">
+                <p class="card-header">AI Text Detector</p>
+                <P class="card-description">AI Text Forecaster offers a seamless and intuitive user experience, making it an invaluable tool for researchers and AI enthusiasts seeking to verify the authenticity of textual data.</P>
+            </div>
+            </a>
+        </div>
+
+        <div class="card-container">
+            <a href="/cb">
+            <div class="card">
+                <p class="card-header">Cohere ChatBot</p>
+                <P class="card-description">Cohere Chatbot - your intelligent assistant designed to enhance user engagement. Powered by advanced AI technology, this chatbot offers seamless, real-time communication.</P>
+            </div>
+            </a>
+        </div>
+
+        <div class="card-container">
+            <a href="yt">
+            <div class="card">
+                <p class="card-header">Youtube Sentiment Analysis</p>
+                <P class="card-description">An app that uses YouTube v3 API to extract comments from URL and after preprocessing the comments the model is ready to predict.</P>
+            </div>
+            </a>
+        </div>
+
+        <div class="card-container">
+            <a href="/tp">
+            <div class="card">
+                <p class="card-header">Topic Modeller</p>
+                <P class="card-description">Discover the hidden themes in your text data with the Topic Insight Tool. This tool helps you analyze and understand large collections of documents by identifying key topics and trends.</P>
+            </div>
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>
