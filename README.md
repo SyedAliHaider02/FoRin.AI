@@ -21,8 +21,8 @@ Discover the hidden themes in your text data with the Topic Insight Tool. This t
 
 ## Features
 
-Efficient Text Summarization: Quickly distill large texts into concise summaries.
-Reliable AI Text Detection: Verify the authenticity of text data seamlessly.
-Engaging Chatbot: Enhance user interaction with real-time AI-driven conversations.
-Insightful Sentiment Analysis: Analyze YouTube comments to understand audience sentiment.
-Comprehensive Topic Modeling: Identify and explore key themes and trends in your text data.
+* Efficient Text Summarization: Quickly distill large texts into concise summaries.
+* Reliable AI Text Detection: Verify the authenticity of text data seamlessly.
+* Engaging Chatbot: Enhance user interaction with real-time AI-driven conversations.
+* Insightful Sentiment Analysis: Analyze YouTube comments to understand audience sentiment.
+* Comprehensive Topic Modeling: Identify and explore key themes and trends in your text data.
