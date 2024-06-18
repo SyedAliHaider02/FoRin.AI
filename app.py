@@ -31,7 +31,7 @@ nltk.download('punkt')
 
 
 app = Flask(__name__)
-app.secret_key = 'b83a1e0ea4e74d22c5d6a3a0ff5e6e66'
+app.secret_key = 'ADD SECRET KEY'
 
 class MyForm(FlaskForm):
     url = StringField('Enter the URL', validators=[DataRequired()])
@@ -72,7 +72,7 @@ def dataset(url,comment):
     vidkey = key(url)
     api_service_name = "youtube"
     api_version = "v3"
-    DEVELOPER_KEY = "AIzaSyDWCrNAYPqjieCCzC6Un2jEsmYlPkELJlI"  
+    DEVELOPER_KEY = "YOUR API KEY"  
 
     youtube = googleapiclient.discovery.build(api_service_name, api_version, developerKey=DEVELOPER_KEY)
 
@@ -354,7 +354,7 @@ class Form3(FlaskForm):
 @app.route('/cb', methods=['GET', 'POST'])
 def home2():
     form = Form3()
-    co = cohere.Client('1rW0cpIarZTZvcThfb0CYzzdLkH2ytsME75PxcrP')
+    co = cohere.Client('YOUR API KEY')
 
     if form.validate_on_submit():
         text = form.text.data
